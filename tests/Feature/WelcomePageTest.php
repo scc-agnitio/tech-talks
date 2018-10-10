@@ -18,5 +18,6 @@ class WelcomePageTest extends TestCase
         $response = $this->get('/');
         $response->assertStatus(200);
         $response->assertSeeText('Tech Talks');
+        $response->assertDontSeeText('Documentation');
     }
 }
